@@ -275,42 +275,35 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">#</th>
 
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
-      <th scope="col">Telefono</th>
       <th scope="col">Correo</th>
-      <th scope="col">Clave</th>
-      <th scope="col">Direccion</th>
+      <th scope="col">Telefono</th>
       <th scope="col">Ciudad</th>
-      <th scope="col">departamento</th>
+      <th scope="col">Direccion</th>
       <th scope="col">Cedula</th>
-      <th scope="col">Zona</th>
-      <th><a href="/usuario"><button type="button" class="btn btn-warning">New</button></a></th>
+      <th><a href="/Regpaciente"><button type="button" class="btn btn-warning">New</button></a></th>
     
       
       
     </tr>
   </thead>
   <tbody>
-  @foreach ($data as $user)
+  @foreach ($data as $paciente)
     <tr>
            
         <th scope="row"></th>
   
-        <td>{{ $user['id'] }}</td>
-        <td>{{ $user['nombre'] }}</td>
-        <td>{{$user['apellido']}}</td>
-        <td>{{$user['telefono']}}</td>
-        <td>{{$user['correo']}}</td>
-        <td>{{$user['clave']}}</td>
-        <td>{{$user['direccion']}}</td>
-        <td>{{$user['ciudad']}}</td>
-        <td>{{$user['departamento']}}</td>
-        <td>{{$user['cedula']}}</td>
-        <td>{{$user['zona']}}</td>
-        <td><a href="{{ route('usuarios.delete',$user['id']) }}"><button type="submit" class="btn btn-danger">Del</button></a></td>
+        <td>{{ $paciente['id'] }}</td>
+        <td>{{ $paciente['nombre'] }}</td>
+        <td>{{$paciente['apellido']}}</td>
+        <td>{{$paciente['correo']}}</td>
+        <td>{{$paciente['telefono']}}</td>
+        <td>{{$paciente['ciudad']}}</td>
+        <td>{{$paciente['direccion']}}</td>
+        <td>{{$paciente['documento']}}</td>
+        <td><a href="{{ route('usuarios.delete',$paciente['id']) }}"><button type="submit" class="btn btn-danger">Del</button></a></td>
 
 
 

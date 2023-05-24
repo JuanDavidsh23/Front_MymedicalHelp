@@ -218,22 +218,23 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./" class="nav-link active">
+            <li class="nav-item">
+                <a href="./permisos" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Usuarios</p>
+                  <p>Permisos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./roles" class="nav-link">
+                <a href="./roles" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Roles</p>
                 </a>
               </li>
+           
               <li class="nav-item">
-                <a href="./permisos" class="nav-link ">
+                <a href="./" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Permisos</p>
+                  <p>Usuarios</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -274,43 +275,24 @@
     <table class="table table">
   <thead>
     <tr>
+      <th scope="col"></th>
       <th scope="col">#</th>
-      <th scope="col">#</th>
-
       <th scope="col">Nombre</th>
-      <th scope="col">Apellido</th>
-      <th scope="col">Telefono</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Clave</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Ciudad</th>
-      <th scope="col">departamento</th>
-      <th scope="col">Cedula</th>
-      <th scope="col">Zona</th>
-      <th><a href="/usuario"><button type="button" class="btn btn-warning">New</button></a></th>
+
+      <th><a href="/Regpermiso"><button type="button" class="btn btn-warning">New</button></a></th>
     
       
       
     </tr>
   </thead>
   <tbody>
-  @foreach ($data as $user)
+  @foreach ($data as $permisos)
     <tr>
            
         <th scope="row"></th>
-  
-        <td>{{ $user['id'] }}</td>
-        <td>{{ $user['nombre'] }}</td>
-        <td>{{$user['apellido']}}</td>
-        <td>{{$user['telefono']}}</td>
-        <td>{{$user['correo']}}</td>
-        <td>{{$user['clave']}}</td>
-        <td>{{$user['direccion']}}</td>
-        <td>{{$user['ciudad']}}</td>
-        <td>{{$user['departamento']}}</td>
-        <td>{{$user['cedula']}}</td>
-        <td>{{$user['zona']}}</td>
-        <td><a href="{{ route('usuarios.delete',$user['id']) }}"><button type="submit" class="btn btn-danger">Del</button></a></td>
+        <td>{{ $permisos['id'] }}</td>
+        <td>{{ $permisos['descripcion'] }}</td>
+        <td><a href="{{ route('permisos.delete',$permisos['id']) }}"><button type="submit" class="btn btn-danger">Del</button></a></td>
 
 
 
